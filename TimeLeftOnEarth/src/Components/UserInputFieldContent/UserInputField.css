@@ -1,0 +1,53 @@
+.mainUserInputField-div{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.inputFieldContent-div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    font-family: 'Poppins',sans-serif;
+    font-size: large;
+}
+
+.inputFieldContent-div input {
+    border-radius: 20px;
+    padding: 10px;
+}
+.inputFieldContent-div select {
+    border-radius: 20px;
+    padding: 10px;
+}
+
+
+.nameGenderInputFields-div, .dobCountryInputFields-div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.calculateButton-div button{
+    cursor: pointer;
+    border-radius: 20px;
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+    padding: 9px;
+    font-family: 'Poppins',sans-serif;
+}
+
+.calculateButton-div{
+    display: flex;
+    gap: 10px;
+}
+
+.errorMessageText{
+    color: red;
+    font-family: 'Poppins',sans-serif;
+}

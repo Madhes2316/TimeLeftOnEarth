@@ -1,0 +1,33 @@
+.mainTopNavBar-div{
+    /* border: 2px solid red; */
+}
+
+.logoDarkMode-div{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logoTitle-div img{
+    width: 50px;
+    height: 50px;
+}
+
+.logoTitle-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoTitle-div h1{
+    font-family: "Silkscreen", sans-serif;
+    font-size: large;
+}
+
+.darkMode-div img{
+    width: 50px;
+    height: 50px;
+    fill: black;
+}

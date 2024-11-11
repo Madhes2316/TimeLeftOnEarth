@@ -1,0 +1,35 @@
+.weekleftmain-div{
+    padding: 30px;
+    padding-top: 0px;
+}
+
+.weekleftmain-div span{
+    font-family: 'Poppins',sans-serif;
+}
+
+.weekBlocks-div{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 5px;
+}
+
+.smallWeekblocks-div{
+    width: 7px;
+    height: 7px;
+    /* background-color: black; */
+}
+
+@keyframes blink {
+    0% {
+      background-color: red;
+    }
+    50% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: red;
+    }
+  }

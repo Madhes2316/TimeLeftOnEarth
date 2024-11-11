@@ -1,0 +1,40 @@
+.timeLeftCardsMain-div{
+    padding: 30px;
+    padding-top: 0px;
+}
+
+.timeLeftCards-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.timeCard-blocks{
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeCard-blocks span{
+    font-family: 'Poppins',sans-serif;
+    font-size: larger;
+}
+
+.timeCard-blocks CountUp{
+    font-family: 'Poppins',sans-serif;
+    margin:5px;
+    font-size: xxx-large;
+}
+
+.timeCard-blocks h1{
+    font-family: 'Poppins',sans-serif;
+    margin:5px;
+    font-size: xxx-large;
+}
