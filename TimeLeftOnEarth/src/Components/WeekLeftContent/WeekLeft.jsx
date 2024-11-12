@@ -1,20 +1,15 @@
-import React from 'react';
-import { FixedSizeList as List } from 'react-window';
+import React, { useState } from 'react';
 import './WeekLeft.css';
+
+import useLocalStorage from 'use-local-storage';
 
 const WeekLeft = ({weekLeft}) => {
 
     const weeksLeft = weekLeft;
-    const renderRow = ({ index, style }) => (
-        <div
-          className="smallWeekblocks-div"
-          key={index}
-          style={{ ...style, backgroundColor: 'orange' }}
-        />
-      );
+    const [darkMode,setDarkMode] = useLocalStorage("darkMode",false);
 
   return (
-    <div className='weekleftmain-div'>
+    <div className='weekleftmain-div' data-theme={darkMode ? 'dark' : 'light'}>
         <h1>Week(s) left for you on Earth({weekLeft})</h1>
         <span>Each block represents a week</span>
         <br />

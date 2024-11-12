@@ -2,14 +2,19 @@ import React, { useState } from 'react'
 import './GreetingContent.css';
 import UserInputField from '../UserInputFieldContent/UserInputField';
 
+import useLocalStorage from 'use-local-storage';
+
 const GreetingContent = () => {
     const [openInput,setOpenInput] = useState(false);
     const handleButtonClick = ()=>{
         setOpenInput(true);
     }
+
+    const [darkMode,setDarkMode] = useLocalStorage("darkMode",false);
+
   return (
     <>
-    <div className='greetingContentMain-div'>
+    <div className='greetingContentMain-div' data-theme={darkMode ? 'dark' : 'light'}>
         <div className='greetingText-div'>
             <h1>
                 Time Left on Earth for 'Developer' is 76 days
@@ -22,6 +27,13 @@ const GreetingContent = () => {
         </div>
     </div>
     <UserInputField isOpen={openInput}/>
+
+    {!openInput
+    ?
+        <div className='dummyfooter-div' data-theme={darkMode ? 'dark' : 'light'}></div>
+    :
+        null
+    }
     </>
   )
 }

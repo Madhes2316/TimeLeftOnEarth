@@ -3,6 +3,8 @@ import './UserInputField.css';
 import { lifeSpanCountryData } from '../../Utils/lifeSpanCountryData';
 import TimeLeftCards from '../TimeLeftContent/TimeLeftCards';
 
+import useLocalStorage from 'use-local-storage';
+
 const UserInputField = ({ isOpen }) => {
   if (!isOpen) return null;
 
@@ -40,9 +42,10 @@ const UserInputField = ({ isOpen }) => {
       country,
     });
     const countryData = lifeSpanCountryData.find(item => item.country === country);
-    const genderLifeExpectancy = countryData ? Math.round(Number(countryData[`${gender}`])) : null;
+    const genderLifeExpectancy = countryData ? Math.round(Number(countryData[`${gender}`])) : 0;
 
     // console.log(genderLifeExpectancy);
+    console.log("yess")
     const lastAliveDate = new Date(dob);
     lastAliveDate.setFullYear(lastAliveDate.getFullYear() + genderLifeExpectancy);
 
@@ -51,6 +54,10 @@ const UserInputField = ({ isOpen }) => {
     let lastAliveDateDay = lastAliveDate.getDate();
     
     const yearLeft = lastAliveDate.getFullYear() - new Date().getFullYear();
+    if(yearLeft < 0){
+      setError("Damn You are still Alive?")
+      return;
+    }
     const monthLeft = diffInMonths(new Date(lastAliveDateYear,lastAliveDateMonth,lastAliveDateDay),new Date());
     const weekLeft = weeksBetween(new Date(),new Date(lastAliveDateYear,lastAliveDateMonth,lastAliveDateDay));
     const daysLeft = daysBetween(new Date(),lastAliveDate)
@@ -104,10 +111,12 @@ const timeBetween = (date1, date2) => {
     setError('');
   }
 
+  const [darkMode,setDarkMode] = useLocalStorage("darkMode",false);
+
 
   return (
     <>
-    <div className="mainUserInputField-div">
+    <div className="mainUserInputField-div" data-theme = {darkMode ? 'dark' : 'light'}>
         <h1>Please fill in your details</h1>
       <div className="inputFieldContent-div">
         <div className="nameGenderInputFields-div">

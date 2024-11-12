@@ -1,5 +1,7 @@
 .greetingContentMain-div{
     /* border: 2px solid yellow; */
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
 .greetingText-div{
@@ -18,16 +20,22 @@
 .greetingText-div span{
     font-family: "Poppins", sans-serif;
     font-size: large;
+    color: var(--text-color);
 }
 
 .greetingText-div button{
     cursor: pointer;
     font-family: "Poppins", sans-serif;
     font-size: medium;
-    color: black;
-    background-color: white;
+    color: var(--text-color);
+    background-color: var(--bg-color);
     /* border: none; */
-    border: 2px solid black;
+    border: 2px solid var(--text-color);
     border-radius: 20px;
     padding: 10px;
+}
+
+.dummyfooter-div{
+    height: 45vh;
+    background-color: var(--bg-color);
 }

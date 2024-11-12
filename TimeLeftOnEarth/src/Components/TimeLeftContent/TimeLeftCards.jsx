@@ -3,6 +3,8 @@ import './TimeLeftCards.css';
 import CountUp from 'react-countup';
 import WeekLeft from '../WeekLeftContent/WeekLeft';
 
+import useLocalStorage from 'use-local-storage';
+
 const TimeLeftCards = ({timeToLeaveEarthStats}) => {
     const timeNameArray = [
         {
@@ -41,10 +43,12 @@ const TimeLeftCards = ({timeToLeaveEarthStats}) => {
             timeLeft:timeToLeaveEarthStats.timeLeft.totalSeconds
         },
     ]
+
+    const [darkMode,setDarkMode] = useLocalStorage("darkMode",false);
     
   return (
     <>
-    <div className='timeLeftCardsMain-div'>
+    <div className='timeLeftCardsMain-div' data-theme={darkMode ? 'dark' : 'light'}>
         <h1>You time left on earth for</h1>
         <div className='timeLeftCards-div'>
         {timeNameArray.map(timeItem => (

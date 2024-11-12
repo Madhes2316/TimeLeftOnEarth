@@ -1,6 +1,12 @@
 .weekleftmain-div{
     padding: 30px;
     padding-top: 0px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.weekleftmain-div h1{
+  margin-top: 0;
 }
 
 .weekleftmain-div span{

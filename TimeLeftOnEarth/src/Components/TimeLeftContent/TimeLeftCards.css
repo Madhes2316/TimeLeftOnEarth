@@ -1,6 +1,13 @@
 .timeLeftCardsMain-div{
     padding: 30px;
     padding-top: 0px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.timeLeftCardsMain-div h1{
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .timeLeftCards-div{
@@ -12,7 +19,7 @@
 }
 
 .timeCard-blocks{
-    border: 2px solid black;
+    border: 2px solid var(--text-color);
     border-radius: 20px;
     width: 150px;
     height: 150px;
@@ -25,16 +32,19 @@
 .timeCard-blocks span{
     font-family: 'Poppins',sans-serif;
     font-size: larger;
+    color: var(--text-color);
 }
 
 .timeCard-blocks CountUp{
     font-family: 'Poppins',sans-serif;
     margin:5px;
     font-size: xxx-large;
+    color: var(--text-color);
 }
 
 .timeCard-blocks h1{
     font-family: 'Poppins',sans-serif;
     margin:5px;
     font-size: xxx-large;
+    color: var(--text-color);
 }

@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+}
+
+:root{
+    --bg-color:white;
+    --text-color:black;
+    --logo-color:black;
+}
+
+
+[data-theme="dark"]{
+    --bg-color:black;
+    --text-color:white;
+    --logo-color:white;
+}
